@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3" *ngIf="post.imageUrl; else placeHolder ">
+            <img [src]="post.imageUrl" [alt]="post.imageUrl">
+        </figure>
+        <ng-template #placeHolder>
+            <figure class="image is-4by3">
+                <img src="assets/mountain.jpeg" alt="alt">
+            </figure>
+        </ng-template>
+    </div>
+    <div class="card-content">
+        <div class="media-content">
+            <p class="title is-4">{{ post.title}}</p>
+            <p class="subtitle is-6">{{post.user}}</p>
+        </div>
+        <div class="content">
+            {{post.content}}
+        </div>
+    </div>
+</div>
